@@ -10,7 +10,7 @@ private:
 
    string prev,current, lastcommand;
    int last_executed, numberofcommands=0;
-   int record[1000]={0};
+   int record[100]={0};
    
    void print_result(string current){
        cout<<"Edited String: "<<current<<endl;
@@ -140,39 +140,39 @@ public:
         record[numberofcommands++]=7;
         
     }
-   void redo(String_Operation* ss){
+   void redo(String_Operation* ss){	
 
            if(last_executed == 1){
                ss->add_string();
-				 }
-			   else if(last_executed == 2){
-				   ss->find_pattern_in_string();
-				   }
-				   else if(last_executed == 3){
-					    ss->reverse_string();
+		 }
+		 else if(last_executed == 2){
+		          ss->find_pattern_in_string();
+			}
+			else if(last_executed == 3){
+			         ss->reverse_string();
+				}
+				else if(last_executed == 4){
+					 ss->remove_blank();
+					 }
+					 else if(last_executed == 5){
+						  ss->find_number_of_digits();
 						 }
-					     else if(last_executed == 4){
-							 ss->remove_blank();
-							 }
-						     else if(last_executed == 5){
-						       ss->find_number_of_digits();
-							      }
-							      else if(last_executed == 6){
-							          ss->remove_vowels();
-								     }
-								     else if(last_executed == 7){
-								        ss->undo();
-									     }
-									     else if(last_executed == 9){
-									         ss->number();
-										     }
-										     else if(last_executed == 10){
-											      ss->last();
-												  }
-												  else if(last_executed == 11){
-												        ss->nlast();
-												     }
-        last_executed = 8;
+						else if(last_executed == 6){
+							 ss->remove_vowels();
+							}
+							 else if(last_executed == 7){
+								  ss->undo();
+								   }
+								  else if(last_executed == 9){
+									   ss->number();
+									   }
+									    else if(last_executed == 10){
+										   ss->last();
+										 }
+										 else if(last_executed == 11){
+											   ss->nlast();
+											  }
+       
         record[numberofcommands++]=8;
         lastcommand = "redo";
     }
@@ -247,7 +247,7 @@ int main () {
 string mystr;
 int command;
 
-cout <<"1. add string"<< endl<< "2. find pattern in string"<< endl<<"3. reverse string"<< endl<< "4. remove blank from string"<< endl<<"5. find number of digits in string"<< endl<<"6. remove vowels from string"<< endl<<"7. undo - should undo the last command"<< endl<<"8. redo - should repeat the last command"<< endl<<"9. number - find number of commands"<< endl<<"10. last - what was last command used"<< endl<<"11. nlast - what was nth last command used"<<endl<< "Press 0 to exit"<<endl; 
+cout <<"1. add string"<< endl<< "2. find pattern in string"<< endl<<"3. reverse string"<< endl<< "4. remove blank from string"<< endl<<"5. find number of digits in string"<< endl<<"6. remove vowels from string"<< endl<<"7. undo - should undo the last command"<< endl<<"8. redo - should repeat the last command"<< endl<<"9. number - find number of commands"<< endl<<"10. last - what was last command used"<< endl<<"11. nlast - what was nth last command used"<<endl<< "Press 0 to exit"<<endl<<endl; 
     
     
 String_Operation ss;
