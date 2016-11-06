@@ -10,7 +10,7 @@ private:
 
    string prev,current, lastcommand;
    int last_executed, numberofcommands=0;
-   int record[100]={0};
+   int record[1000]={0};
    
    void print_result(string current){
        cout<<"Edited String: "<<current<<endl;
