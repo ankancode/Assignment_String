@@ -1,4 +1,4 @@
-# Assignment_String
+# Operate_Strings
 System will ask user to enter commands. User can enter following command - 
 
 1. add string 
